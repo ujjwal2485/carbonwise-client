@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
 import cart from '../../../images/cart.svg';
 import { DownOutlined, SmileOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
-import { AppstoreOutlined,UserOutlined,HeartOutlined,SwapOutlined,ContactsOutlined,DatabaseOutlined, HomeOutlined, SettingOutlined } from '@ant-design/icons';
+import { AppstoreOutlined,UserOutlined,HeartOutlined,SwapOutlined,ContactsOutlined,DatabaseOutlined, HomeOutlined, SettingOutlined ,SearchOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
-import "./header.css"
+import "./header.css";
+import logo from "../../../images/Greenlogo.jpeg"
+
 
 const Header = () => {
 
@@ -156,10 +158,14 @@ const Header = () => {
         };
       
 
+          
+        
+          
+
 
     return (
         <>
-            <header className="header-top-strip py-2">
+            <header className="header-top-strip ">
             <div class="custom-container">
     <div class="custom-row">
         <div class="custom-col">
@@ -178,33 +184,26 @@ const Header = () => {
 
             <header className="header-upper py-2" style={{display:"flex",flexDirection:"row"}}>
                 <div className="container-xxl">
-                    <div className="row align-items-center">
-                        <div className="col-2">
-                            <h2>
-                                <Link className="text-white" style={{ fontSize: '28px' }}>
-                                    CarbonWise.  
-                                </Link>
-                            </h2>
-                        </div>
-                        <div className="col-5">
-                            <div className="input-group">
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="Search Product ..."
-                                    aria-label="Search Product ..."
-                                    aria-describedby="basic-addon2"
-                                />
-                                <span className="input-group-text" id="basic-addon2">
-                                    <BsSearch className="fs-6" />
-                                </span>
-                                
-                            </div>    
-                        </div>
-                        <div className="col-5">
-                        <Dropdown overlay={menu1}>
+                    <div className="headerrow">
+                        <div className="ll">
+                                    <img src={logo}alt="My logo"/>
+                         </div>
+
+                                    
+    <div class="form">
+      <i class="fa fa-search"></i>
+      <input type="text" class="form-control form-input" placeholder="Search anything..."/>
+      <span class="left-pan"><i class="fa fa-microphone"></i></span>
+    </div>
+    
+
+
+                         
+
+                        <div className="useroptions">
+                        <Dropdown overlay={menu1} >
                          <a onClick={(e) => e.preventDefault()}>
-                         <Space style={{fontSize:"21px"}}  ><UserOutlined/> <DownOutlined /></Space></a>
+                         <Space style={{fontSize:"20px",color:" white"}}  ><UserOutlined/> <DownOutlined /></Space></a>
                          </Dropdown>
                          </div>
                     </div>
@@ -213,10 +212,9 @@ const Header = () => {
             </header>
 
 
-
             <header className="header-bottom py-2">
                 <div className="container-xxl">
-                <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items}  />
+                <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} style={{borderRadius:"8px"}}  />
                 </div>
             </header>
         </>

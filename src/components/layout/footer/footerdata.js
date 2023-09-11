@@ -1,7 +1,7 @@
 import facebook from "../../../images/icon-facebook.svg";
 import twitter from "../../../images/icon-twitter.svg";
 import linkedin from "../../../images/icon-linkedin.svg";
-import logoPrimary from "../../../images/gatividhi.png";
+import logoPrimary from "../../../images/footeee.jpeg";
 
 
 export const socialData = [
@@ -28,12 +28,12 @@ export const socialData = [
   export const menudata = [
     {
       id: 1,
-      title: "services",
+      title: "Store",
       link: "/services", 
     },
     {
       id: 2,
-      title: "Online Payment",
+      title: "Compare",
       link: "/payment",
     },
     {
@@ -45,24 +45,21 @@ export const socialData = [
 
 
   
-export const footerData = {
+  export const footerData = {
     socialtitle: "Get connected with us on social networks:",
-    tagline:"Where Logistics Meet innovation",
-    footertitle1:"Company",
-    footertitle2:"Useful Links",
     footertitle3:"Contact Us",
-    address:"Gomtinagar, Lucknow, uttar pradesh, India",
-    email:"support@gatividhits.com",
-    phone1:"+919219974136",
-    phone2:"+919219974136",
-    copyright:"© 2023 Gatividhi transsolutions pvt. ltd. All rights reserved."
+    address:"SRM, Chennai, TamilNadu",
+    phone1:"+919026003602",
+    phone2:"+919555723130",
+    copyright:"© 2023 CarbonWise.inc."
 }
+
 
 
 export const Usefullinks = [
     {
       id: 1,
-      title: "Get Quote",
+      title: "Buy Now",
       link: "/getquote", 
     },
     {
@@ -83,5 +80,5 @@ export const Usefullinks = [
 export const brandData = {
   name: "gatividhi logo",
   logo1: logoPrimary
-};
+}
 

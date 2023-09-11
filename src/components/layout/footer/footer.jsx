@@ -36,7 +36,7 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className='col-md-2 col-lg-2 col-xl-2'>
+            <div className='services col-md-2 col-lg-2 col-xl-2'>
               <h4 className='footer-title'>{footerData.footertitle1}</h4>
               {menudata.map((menu) => {
                 return (
